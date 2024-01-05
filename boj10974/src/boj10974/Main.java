@@ -19,7 +19,7 @@ public class Main {
 
 	public static void permutate(int[] tmp, boolean[] visited, int depth) {
 		if (depth == N) {
-			// System.out.println(Arrays.toString(tmp));
+			System.out.println(Arrays.toString(tmp));
 			StringBuilder sb = new StringBuilder();
 			for (int el : tmp) {
 				sb.append(el);
@@ -34,7 +34,7 @@ public class Main {
 			}
 			tmp[depth] = arr[i];
 			visited[i] = true;
-			permutate(tmp, visited, depth+1);
+			permutate(tmp, visited, depth + 1);
 			visited[i] = false;
 		}
 
