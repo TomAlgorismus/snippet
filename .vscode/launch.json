@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "pg12946",
+            "request": "launch",
+            "mainClass": "pg12946.Main",
+        },
+        {
+            "type": "java",
             "name": "boj15661",
             "request": "launch",
             "mainClass": "boj15661.Main",
