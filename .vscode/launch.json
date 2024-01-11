@@ -6,6 +6,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "boj13251",
+            "request": "launch",
+            "mainClass": "boj13251.Main",
+            "args": [
+                "<",
+                "boj13251/src/boj13251/input.txt"
+            ]
+        },
+        {
+            "type": "java",
             "name": "pg12946",
             "request": "launch",
             "mainClass": "pg12946.Main",
