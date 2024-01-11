@@ -15,10 +15,15 @@ public class Main {
         int gcd = getGCD(R, G);
 
         // 최대 공약수의 약수들을 이용하여 가능한 조합을 출력
-        for (int i = 1; i <= gcd; i++) {
+        // for (int i = 1; i <= gcd; i++) { // 기존 코드
+        for (int i = 1; i < (int) Math.sqrt(gcd) + 1; i++) { // 최적화된 코드
             if (gcd % i != 0) continue; // i가 gcd의 약수가 아니면 건너뛰기
             // 선수의 수, 빨간 사과의 배분, 초록 사과의 배분 출력
             System.out.println(gcd / i + " " + R / gcd * i + " " + G / gcd * i);
+            if (i != gcd / i) { // i가 약수의 절반 이하일 때만 짝이 되는 약수도 출력
+                int j = gcd / i;
+                System.out.println(j + " " + R / gcd * i + " " + G / gcd * i);
+            }
         }
     }
 
