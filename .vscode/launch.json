@@ -6,6 +6,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "boj11652",
+            "request": "launch",
+            "mainClass": "boj11652.Main",
+            "args": [
+                "<",
+                "boj11652/src/boj11652/input.txt"
+            ]
+        },
+        {
+            "type": "java",
             "name": "boj13251",
             "request": "launch",
             "mainClass": "boj13251.Main",
