@@ -3,6 +3,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "pg12973",
+            "request": "launch",
+            "mainClass": "pg12973.Solution",
+        },
+        {
+            "type": "java",
             "name": "boj1157",
             "request": "launch",
             "mainClass": "boj1157.Main",
