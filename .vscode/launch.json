@@ -3,6 +3,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "boj2512",
+            "request": "launch",
+            "mainClass": "boj2512.Main",
+            "args": [
+                "<",
+                "boj2512/src/boj2512/input.txt"
+            ]
+        },
+        {
+            "type": "java",
             "name": "pg70129",
             "request": "launch",
             "mainClass": "pg70129.Main",
