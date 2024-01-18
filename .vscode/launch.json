@@ -1,7 +1,10 @@
 {
     "version": "0.2.0",
     "configurations": [
-        {
+{"type": "java",
+"name": "pg72412",
+"request": "launch",
+"mainClass": "pg72412.Main"},        {
             "type": "java",
             "name": "boj2512",
             "request": "launch",
