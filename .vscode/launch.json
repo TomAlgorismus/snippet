@@ -2,6 +2,10 @@
     "version": "0.2.0",
     "configurations": [
 {"type": "java",
+"name": "boj1260",
+"request": "launch",
+"mainClass": "boj1260.Main",
+"args": ["<","boj1260/src/boj1260/input.txt"]},{"type": "java",
 "name": "pg64062",
 "request": "launch",
 "mainClass": "pg64062.Main"},{"type": "java",
