@@ -2,6 +2,10 @@
     "version": "0.2.0",
     "configurations": [
 {"type": "java",
+"name": "boj9095",
+"request": "launch",
+"mainClass": "boj9095.Main",
+"args": ["<","boj9095/src/boj9095/input.txt"]},{"type": "java",
 "name": "boj2178",
 "request": "launch",
 "mainClass": "boj2178.Main",
