@@ -1,6 +1,7 @@
 # 문제 번호 INPUT
-echo "프로그래머스 문제 번호: "
-read problem_number
+# echo "프로그래머스 문제 번호: "
+# read problem_number
+problem_number=$1
 echo "프로그래머스 문제 번호 확인: $problem_number"
 problem_name="pg$problem_number"
 # 폴더 생성

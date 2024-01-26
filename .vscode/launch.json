@@ -2,28 +2,86 @@
     "version": "0.2.0",
     "configurations": [
 {"type": "java",
-"name": "boj9095",
+"name": "boj1987",
 "request": "launch",
-"mainClass": "boj9095.Main",
-"args": ["<","boj9095/src/boj9095/input.txt"]},{"type": "java",
-"name": "boj2178",
+"mainClass": "boj1987.Main",
+"args": ["<","boj1987/src/boj1987/input.txt"]},{"type": "java",
+"name": "boj1388",
 "request": "launch",
-"mainClass": "boj2178.Main",
-"args": ["<","boj2178/src/boj2178/input.txt"]},{"type": "java",
-"name": "boj2210",
-"request": "launch",
-"mainClass": "boj2210.Main",
-"args": ["<","boj2210/src/boj2210/input.txt"]},{"type": "java",
-"name": "boj1260",
-"request": "launch",
-"mainClass": "boj1260.Main",
-"args": ["<","boj1260/src/boj1260/input.txt"]},{"type": "java",
-"name": "pg64062",
-"request": "launch",
-"mainClass": "pg64062.Main"},{"type": "java",
-"name": "pg72412",
-"request": "launch",
-"mainClass": "pg72412.Main"},        {
+"mainClass": "boj1388.Main",
+"args": ["<","boj1388/src/boj1388/input.txt"]},        {
+            "type": "java",
+            "name": "boj11399",
+            "request": "launch",
+            "mainClass": "boj11399.Main",
+            "args": [
+                "<",
+                "boj11399/src/boj11399/input.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "boj16194",
+            "request": "launch",
+            "mainClass": "boj16194.Main",
+            "args": [
+                "<",
+                "boj16194/src/boj16194/input.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "boj9095",
+            "request": "launch",
+            "mainClass": "boj9095.Main",
+            "args": [
+                "<",
+                "boj9095/src/boj9095/input.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "boj2178",
+            "request": "launch",
+            "mainClass": "boj2178.Main",
+            "args": [
+                "<",
+                "boj2178/src/boj2178/input.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "boj2210",
+            "request": "launch",
+            "mainClass": "boj2210.Main",
+            "args": [
+                "<",
+                "boj2210/src/boj2210/input.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "boj1260",
+            "request": "launch",
+            "mainClass": "boj1260.Main",
+            "args": [
+                "<",
+                "boj1260/src/boj1260/input.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "pg64062",
+            "request": "launch",
+            "mainClass": "pg64062.Main"
+        },
+        {
+            "type": "java",
+            "name": "pg72412",
+            "request": "launch",
+            "mainClass": "pg72412.Main"
+        },
+        {
             "type": "java",
             "name": "boj2512",
             "request": "launch",
