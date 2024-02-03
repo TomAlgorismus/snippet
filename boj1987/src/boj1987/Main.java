@@ -4,60 +4,56 @@ package boj1987;
 import java.util.*;
 import java.io.*;
 
-class Data {
-    int r;
-    int c;
-    boolean[] visited;
-    int count;
-
-    public Data(int r, int c, boolean[] visited, int count) {
-        this.r = r;
-        this.c = c;
-        this.visited = visited;
-        this.count = count;
-    }
-
-}
-
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        R = sc.nextInt();
-        C = sc.nextInt();
-        board = new char[R][C];
+
+    static int R, C; // 보드의 행과 열 크기
+    static char[][] map; // 보드의 알파벳을 저장하는 배열
+    static boolean[] visited; // 알파벳의 방문 여부를 저장하는 배열
+    static int[] dr = { 0, 0, -1, 1 }; // 상, 하, 좌, 우 방향을 나타내는 행 이동 배열
+    static int[] dc = { -1, 1, 0, 0 }; // 상, 하, 좌, 우 방향을 나타내는 열 이동 배열
+    static int max = 0; // 지나갈 수 있는 최대 칸 수
+
+    public static void main(String[] args) throws IOException {
+        // 입력 처리
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        R = Integer.parseInt(st.nextToken()); // 세로 크기 입력
+        C = Integer.parseInt(st.nextToken()); // 가로 크기 입력
+
+        map = new char[R][C]; // 보드 초기화
+        visited = new boolean[26]; // 알파벳 방문 여부 배열 초기화 (A-Z)
+
+        // 보드의 알파벳 입력
         for (int i = 0; i < R; i++) {
-            board[i] = sc.next().toCharArray();
+            String str = br.readLine();
+            for (int j = 0; j < C; j++)
+                map[i][j] = str.charAt(j);
         }
-        sc.close();
-        System.out.println(Arrays.deepToString(board));
-        dfs();
+
+        // DFS 탐색 시작
+        dfs(0, 0, 1);
+
+        // 결과 출력
+        System.out.println(max);
     }
 
-    static char[][] board;
-    static int R;
-    static int C;
+    static void dfs(int r, int c, int count) {
+        max = Math.max(max, count); // 최대 칸 수 갱신
+        visited[map[r][c] - 'A'] = true; // 현재 칸의 알파벳 방문 처리
 
-    public static void dfs() {
-        Stack<Data> stack = new Stack();
-        stack.push(new Data(0, 0, new boolean[26], 0));
-        int max = 0;
-        while (!stack.isEmpty()) {
-            Data cursor = stack.pop();
-            if (cursor.r < 0 || cursor.r >= R || cursor.c < 0 || cursor.c >= C) {
+        // 상하좌우 이동 탐색
+        for (int i = 0; i < 4; i++) {
+            int nr = r + dr[i]; // 다음 행 위치
+            int nc = c + dc[i]; // 다음 열 위치
+
+            // 보드 범위를 벗어나거나 이미 방문한 알파벳은 탐색하지 않음
+            if (nr < 0 || nr >= R || nc < 0 || nc >= C || visited[map[nr][nc] - 'A'])
                 continue;
-            }
-            int letter = board[cursor.r][cursor.c] - 'A';
-            if (cursor.visited[letter]) {
-                continue;
-            }
-            cursor.visited[letter] = true;
-            cursor.count++;
-            max = Math.max(max, cursor.count);
-            stack.push(new Data(cursor.r + 1, cursor.c, cursor.visited.clone(), cursor.count));
-            stack.push(new Data(cursor.r - 1, cursor.c, cursor.visited.clone(), cursor.count));
-            stack.push(new Data(cursor.r, cursor.c + 1, cursor.visited.clone(), cursor.count));
-            stack.push(new Data(cursor.r, cursor.c - 1, cursor.visited.clone(), cursor.count));
+
+            dfs(nr, nc, count + 1); // 다음 칸으로 이동하여 탐색
         }
-        System.out.println(max);
+
+        visited[map[r][c] - 'A'] = false; // 현재 칸의 알파벳 방문 처리 해제
     }
 }
