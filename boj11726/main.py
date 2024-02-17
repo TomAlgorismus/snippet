@@ -1,7 +1,7 @@
-import sys
+# import sys
 
-input = lambda: sys.stdin.readline().rstrip()
-print = lambda x: sys.stdout.write(str(x))
+# input = lambda: sys.stdin.readline().rstrip()
+# print = lambda x: sys.stdout.write(str(x))
 
 n = int(input())
 dp = [0] * (n+1)
